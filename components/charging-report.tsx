@@ -33,10 +33,6 @@ export function ChargingReport({ chargeData, costInputs, results }: ChargingRepo
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold text-foreground uppercase tracking-wide">Ladekostnad rapport</h2>
-          <Button onClick={handlePrint} className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Printer className="mr-2 h-4 w-4" />
-            Skriv ut rapport
-          </Button>
         </div>
 
         <div className="space-y-6">
@@ -138,6 +134,13 @@ export function ChargingReport({ chargeData, costInputs, results }: ChargingRepo
               </p>
               <p className="text-5xl font-bold text-accent">{results.totalChargingCost.toFixed(2)} kr</p>
             </div>
+          </div>
+
+          <div className="flex justify-center pt-4">
+            <Button onClick={handlePrint} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Printer className="mr-2 h-5 w-5" />
+              Skriv ut rapport
+            </Button>
           </div>
         </div>
       </div>
